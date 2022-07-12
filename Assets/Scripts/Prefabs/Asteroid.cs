@@ -69,12 +69,12 @@ public class Asteroid : MonoBehaviour
     {
         for (int i = 0; i < 2; i++)
         {
-            float x = Random.Range((int)transform.position.x - 5, (int)transform.position.x + 5);
-            Vector3 pos = new Vector3(x, transform.position.y);
+            float random = Random.Range(-2, 2);
+            Vector3 newPosition = new Vector3 (transform.position.x + random, transform.position.y + random,transform.position.z);
 
             GameObject new_asteroid = Instantiate(
                 myPreFab,
-                transform.position,
+                newPosition,
                 transform.rotation
             );
             Rigidbody2D rb2 =new_asteroid.GetComponent<Rigidbody2D>();
@@ -103,4 +103,8 @@ public class Asteroid : MonoBehaviour
         }
     }
 
+}
+
+internal class Vector2D
+{
 }

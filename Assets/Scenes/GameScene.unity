@@ -671,7 +671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myPrefab: {fileID: 9175686483798015892, guid: 309e342521b1f564bbe9f3b23d61ad60, type: 3}
   myParent: {fileID: 519420032}
-  maxAsteroids: 20
+  maxAsteroids: 15
   activeAsteroids: 0
 --- !u!1 &1085802031
 GameObject:
