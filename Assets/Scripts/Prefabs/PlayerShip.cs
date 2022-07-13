@@ -8,6 +8,7 @@ public class PlayerShip : MonoBehaviour
 {
     Rigidbody2D rb;
     PlayerControl playerControl;
+    public GameOver gameOverMenu;
     public FirePoint firePoint;
     public ParticleSystem thrustForward;
     public ParticleSystem thrustRotateLeft;
@@ -88,9 +89,11 @@ public class PlayerShip : MonoBehaviour
             Destroy(effectCollision, 2.0f);
             if (hitpoints <= 0)
             {
+             
                 Destroy(gameObject);
                 playerControl.Disable();
                 effectCollision.transform.localScale = Vector3.one * 3;
+                gameOverMenu.GameOverMenu();
             }
         }
 
